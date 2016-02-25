@@ -5,8 +5,8 @@ angular.module('menu')
 	function($scope, $location) {
 		
 		$scope.menu = [
-           {titulo: 'Produto', link: '/produto'},
-           {titulo: 'Categoria', link: '/categoria'}
+           {itemLabel: 'Produto', link: '/produto'},
+           {itemLabel: 'Categoria', link: '/categoria'}
         ];
 		
 		$scope.redirect = function(link) {

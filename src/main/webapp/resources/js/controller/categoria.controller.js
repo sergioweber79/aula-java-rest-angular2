@@ -4,6 +4,20 @@ angular.module('categoria')
 		
 		$scope.categoria = {};
 		$scope.categorias = [];
+		$scope.counted = 0;
+		
+		
+		$scope.$watch("categorias",function(){
+						if ($scope.categorias.categoriaView )
+						$scope.counted = $scope.categorias.categoriaView.length;
+						
+			
+				}
+				
+		
+		
+		);
+		
 		
 		var error = function() {
 			console.log("Status = " + CategoriaService.status);
@@ -31,6 +45,7 @@ angular.module('categoria')
 			CategoriaService.findAll().then(
 				function() {
 					$scope.categorias = CategoriaService.data;
+					console.log($scope.categorias);
 					CategoriaService.data = {};
 				},
 				error

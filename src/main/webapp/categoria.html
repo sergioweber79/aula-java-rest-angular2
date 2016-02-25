@@ -1,4 +1,6 @@
 <div>
+
+	<h3>Categorias</h3>
 	<div>
 		ID: <input ng-disabled="!updateValue" 
 				   type="text"
@@ -24,6 +26,10 @@
 	<button ng-click="update()" ng-disabled="updateValue">UPDATE</button>
 	<button ng-click="delete()">DELETE</button>
 	<br />
-	
+	<h3>Resultado FIND: </h3>
+		
 	<p ng-repeat="c in categorias">{{c}}</p>
+	<p>Total: {{counted}}</p>
+	<br/>
+	
 </div>

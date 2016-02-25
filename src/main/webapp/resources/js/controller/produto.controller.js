@@ -4,6 +4,19 @@ angular.module('produto')
 		
 		$scope.produto = {};
 		$scope.produtos = [];
+		$scope.counted = 0;
+		
+		
+		$scope.$watch("produtos",function(){
+						if ($scope.produtos.produtoView )
+						$scope.counted = $scope.produtos.produtoView.length;
+						
+			
+				}
+				
+		
+		
+		);
 		
 		var error = function() {
 			console.log('Status = ' + ProdutoService.status + '\n');
